@@ -1,0 +1,42 @@
+{"intents":  [
+  {
+    "tag": "greeting",
+    "patterns": ["hi", "how are you", "hello", "is anyone home?", "good day", "whats up"],
+    "responses": ["Hi there, What can I get started for you today?", "Hello, need some caffeine?"]
+  },
+  {
+    "tag": "milkQuery",
+    "patterns": ["what kind of milk do they have?", "what are the milk options?", "do they have almond milk?"],
+    "responses": ["Here are your milk choices for", "These are the milk choices at"]
+  },
+  {
+    "tag": "locationQuery",
+    "patterns": ["what is the closest coffee shop to me?", "how far is the nearest coffee shop?", "where is a coffee shop i can order from near me?"],
+    "responses": ["These are the coffee shops closest to you"]
+  },
+   {
+    "tag": "popularQuery",
+    "patterns": ["What is the most popular coffee shop?", "The best coffee chop in my city?", "Which coffee shop is your favorite"],
+    "responses": ["These are the most popular coffee shops in your area"]
+  },
+  {
+    "tag": "flavorQuery",
+    "patterns": ["What flavors of coffee do they have", "do they have syrups?", "What pump flavors do they have?"],
+    "responses": ["These are the list of flavors at", "Here are the flavors at"]
+  },
+  {
+    "tag": "order",
+    "patterns": ["place order", "order coffee", "submit my order"],
+    "responses": ["submitting order", "placing order now"]
+  },
+  {
+    "tag": "milk",
+    "patterns": ["almond milk", "almond", "soy milk", "soy", "oat milk", "oat", "whole milk", "whole", "steamed milk", "steamed"],
+    "responses": ["got it", "sounds delish"]
+  },
+   {
+    "tag": "flavor",
+    "patterns": ["mocha", "hazelnut", "chai", "pumpkin", "simple syrup", "mint"],
+    "responses": ["got it", "sounds delish"]
+  }
+]}
