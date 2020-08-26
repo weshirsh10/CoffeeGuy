@@ -15,8 +15,8 @@ pip install requirements.txt
 
 Start the flask server on localhost:5000 for mac/linux
 ```
-export FLASK_APP=api
-export FLASK_ENV=development
+cd api
+export FLASK_APP=app.py
 flask run
 ```
 

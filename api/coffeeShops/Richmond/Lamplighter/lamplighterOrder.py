@@ -146,15 +146,15 @@ def lamplighterOrder(order, items, user):
 
         cardNum = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, xpathDict.get("cardNumber"))))
         cardNum.click()
-        cardNum.send_keys("4147202437674516")
+        cardNum.send_keys("5555555555555555")
 
         cardExp = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, xpathDict.get("cardExp"))))
         cardExp.click()
-        cardExp.send_keys("0825")
+        cardExp.send_keys("5555")
 
         cvv = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, xpathDict.get("cvv"))))
         cvv.click()
-        cvv.send_keys("018")
+        cvv.send_keys("555")
 
         zip = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, xpathDict.get("zip"))))
         zip.click()
