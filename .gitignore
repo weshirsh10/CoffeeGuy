@@ -4,3 +4,5 @@ api/firebase/cg_fb_creds.json
 
 *.pyc
 *.pyo
+
+api/chromedriver
