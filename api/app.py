@@ -10,7 +10,7 @@ def hello_world():
 
 @app.route('/drinks')
 def getDrinks():
-    drink = db.getDrink(request.args.get('city'), request.args.get('location'), request.args.get('drink'))
+    drink = db.getDrink(request.json.get('city'), request.json.get('location'), request.json.get('drink'))
     return drink
 
 @app.route('/order')
@@ -18,10 +18,15 @@ def placeOrder():
     city = request.json.get('city')
     location = request.json.get('location')
     order = request.json.get('order')
+    user = request.json.get('user')
+
+    itemArray=[]
+    for item in order:
+        itemArray.append(db.getItem(city,location, item.get("name")))
 
     if city == 'Richmond':
         if location == 'Lamplighter':
-            ordered = lamplighterOrder(order)
+            ordered = lamplighterOrder(order, itemArray, user)
             return ordered
         elif location == 'Blanchards':
             print("Call Blanchards Order")

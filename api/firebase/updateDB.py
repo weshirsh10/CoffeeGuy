@@ -5,16 +5,17 @@ cred = credentials.Certificate("./cg_fb_creds.json")
 firebase_admin.initialize_app(cred)
 db = firestore.client()
 
-drink = {
+item = {
     "BlackEye": {
     "name": "Black Eye",
     "description": "hot batch brewed coffee or cold brew with a double shot of espresso added",
+    "drink": True,
     "type": {
         "iced": True,
         "hot": True,
         "Espresso": True,
-    "extraEspresso": True,
-    "steamedMilk": False
+        "extraEspresso": True,
+        "steamedMilk": False
     },
     "xpath": "/html/body/div/div/div/div[1]/div[2]/div[2]/div/div[1]/div/div/div/div/div/div/div[2]/div/div[2]/div/div/div",
     "sizes": {
@@ -28,8 +29,8 @@ drink = {
     }
 }
 
-def addDrink(city, location, drink):
-    drinks = db.collection("coffeeShops").document(city).collection(location).document("drinks").update(drink)
-    print("done", drinks)
+def addDrink(city, location, item):
+    items = db.collection("coffeeShops").document(city).collection(location).document("items").update(item)
+    print("done", items)
 
-addDrink("Richmond", "Lamplighter", drink)
+addDrink("Richmond", "Lamplighter", item)

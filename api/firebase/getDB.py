@@ -5,7 +5,7 @@ cred = credentials.Certificate("./firebase/cg_fb_creds.json")
 firebase_admin.initialize_app(cred)
 db = firestore.client()
 
-def getDrink(city, location, drink):
-    drinkMap = db.collection("coffeeShops").document(city).collection(location).document("drinks").get().to_dict()
-    return drinkMap.get(drink)
+def getItem(city, location, item):
+    itemMap = db.collection("coffeeShops").document(city).collection(location).document("items").get().to_dict()
+    return itemMap.get(item)
 
