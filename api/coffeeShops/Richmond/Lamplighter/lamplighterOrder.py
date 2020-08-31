@@ -170,6 +170,6 @@ def lamplighterOrder(order, items, user):
     except Exception as e:
         print("ERRRROOR", str(e))
     finally:
-        print("QUit driver")
+        print("Quit driver")
 
     return "success"
